@@ -1,0 +1,344 @@
+html, body
+{
+	margin:					0;
+	padding:				0;
+}
+
+
+@font-face {
+	font-family:			'Gotham-ExtraLight';
+	src: 					url('fonts/Gotham-ExtraLight_gdi.eot');
+	src: 					url('fonts/Gotham-ExtraLight_gdi.eot?#iefix') format('embedded-opentype'),
+							url('fonts/Gotham-ExtraLight_gdi.woff') format('woff'),
+							url('fonts/Gotham-ExtraLight_gdi.ttf') format('truetype'),
+							url('fonts/Gotham-ExtraLight_gdi.svg#Gotham-ExtraLight') format('svg');
+	font-weight: 			275;
+	font-style: 			normal;
+	font-stretch: 			normal;
+	unicode-range: 			U+0020-2212;
+}
+
+// --- vars
+$background:				#FFFFFF;
+$headerColour:				#000000;
+$noPadding:					0;
+$smallPadding:				1%;
+$largePadding:				2%;
+$letterSpacing:	        	2px;
+$defaultFontSize:			1em;
+
+$white:  					#FFFFFF;
+$grey:  					#333E47;
+$lightGrey:					#a3aaae;
+$lightBlue:					#00A19A;
+$blue:						#0095D1;
+$yellow:  					#FCBF00;
+
+$customFont:				'Gotham-ExtraLight';
+
+// --- extends
+
+%clearfix:after
+{
+	display:				block;
+	clear:					both;
+	content:				"";
+}
+
+%center
+{
+	margin-left: 			auto !important;
+    margin-right: 			auto !important;
+    display:				inline-block !important;
+    text-align:				center;
+}
+
+%fancyFont
+{
+	font-family: 			Arial;
+}
+
+%normalFont
+{
+	font-family:			Arial;
+}
+
+body
+{
+	@extend 				%normalFont;
+	background:				$background;
+	margin:   				$noPadding;
+	padding:				$noPadding;
+}
+
+.row
+{
+	@extend 				%clearfix;
+
+	& + &
+	{
+		margin-top:			$smallPadding;
+	}
+}
+
+[class^="column-"]
+{
+	float:					left;
+	margin-right:			$largePadding;
+	-webkit-box-sizing:		border-box; 
+    -moz-box-sizing:		border-box; 
+    box-sizing:				border-box;
+ 
+    &:last-child 
+    {
+        margin-right:		0%;
+    }
+}
+
+.thin
+{
+	padding-top:			3px;
+	text-align:				center;
+	float:					left;
+	width:					5%;
+	font-size:				1.2em;
+	color:					$yellow;
+}
+
+.nav
+{
+	font-size:				1.2em;
+	font-family:			$customFont;
+	float:					left;
+}
+
+.column-1
+{ 	
+	width:					(100% / 12) - ($largePadding * 11 / 12);
+}
+.column-2
+{ 	
+	width:					(100% / 6) - ($largePadding * 10 / 12); 
+}
+.column-3
+{ 	
+	width:					(100% / 4) - ($largePadding * 9 / 12); 
+}
+.column-4
+{ 	
+	width:					(100% / 3) - ($largePadding * 8 / 12); 
+}
+.column-5
+{ 	
+	width:					(100% / 2.4) - ($largePadding * 7 / 12); 
+}
+.column-6
+{ 	
+	width:					(100% / 2) - ($largePadding * 6 / 12); 
+}
+.column-7
+{ 	
+	width:					(100% / 1.714285714285714) - ($largePadding * 5 / 12); 
+}
+.column-8
+{ 	
+	width:					(100% / 1.5) - ($largePadding * 4 / 12); 
+}
+.column-9
+{ 	
+	width:					(100% / 1.333333333333333) - ($largePadding * 3 / 12); 
+}
+.column-10
+{ 	
+	width:					(100% / 1.2) - ($largePadding * 2 / 12); 
+}
+.column-11
+{ 	
+	width:					(100% / 1.090909090909091) - ($largePadding * 1 / 12); 
+}
+.column-12
+{ 	
+	width:					100%; 
+}
+
+h2,h3,h4
+{
+	padding:				$noPadding;
+	margin:					$noPadding;
+	font-weight: 			0;
+	letter-spacing:			$letterSpacing;
+}
+
+.center
+{
+	@extend 				%center;
+}
+
+.white
+{
+	background:				$white;
+}
+
+.grey
+{
+	background:				$grey;
+	height:					90vh;
+}
+
+.yellow
+{
+	background:				$yellow;
+	height:					6vh;
+}
+
+.noMargin
+{
+	margin:					0 !important;
+}
+
+.smallPadding
+{
+	padding:				$smallPadding;
+}
+
+.largePadding
+{
+	padding:				$largePadding;
+}
+
+.tagline
+{
+	font-family:			$customFont;
+	color:					$yellow;
+	font-size:				6.4vh;
+}
+
+.navItem
+{
+	max-width:				333px;
+}
+
+.navigation-top
+{
+	padding-bottom:			4%;
+}
+
+.smallHeading
+{
+	font-weight:			bold;
+	color:					$yellow;
+	font-family:			$customFont;
+	font-size:				2em;
+}
+
+.floatRight
+{
+	float:					right;
+	margin-right:			-25% !important;
+	position:				relative;
+}
+
+.social
+{
+	padding-top:			30vh;
+	padding-left:			$smallPadding;
+}
+
+a
+{
+	text-decoration:		none;
+	color:					$white !important;
+}
+
+p
+{
+	color:					$white;
+	font-family:			$customFont;
+	font-size:				1.1em;
+}
+
+ul
+{
+	color:					$white;
+	font-family:			$customFont;
+	font-size:				1.21em;
+	padding-left:			3.2%;
+}
+
+.smallerHeading
+{
+	color:					$yellow;
+	font-family:			$customFont;
+	font-size:				1.5em;
+	padding-bottom:			$smallPadding;
+}
+
+.whiteHeading
+{
+	color:					$white;
+	font-family:			$customFont;
+	font-size:				2em;
+	padding-bottom:			$smallPadding;
+}
+
+.greyHeading
+{
+	font-family:			$customFont;
+	color:					$lightGrey;
+	font-size:				1.8em;
+	font-weight:			bold;
+	margin-top:				4%;
+}
+
+.nameYellow
+{
+	font-family:			$customFont;
+	color:					$yellow;
+	font-size:				1.4em;
+	font-weight:			bold;
+	padding-top:			2.5%;
+	padding-bottom:			1%;
+}
+
+.nameYellow
+{
+	font-family:			$customFont;
+	color:					$yellow;
+	font-size:				1.4em;
+	font-weight:			bold;
+	padding-top:			2.5%;
+	padding-bottom:			1%;
+}
+
+.nameLightBlue
+{
+	font-family:			$customFont;
+	color:					$lightBlue;
+	font-size:				1.4em;
+	font-weight:			bold;
+	padding-top:			2.5%;
+	padding-bottom:			1%;
+}
+
+.nameBlue
+{
+	font-family:			$customFont;
+	color:					$blue;
+	font-size:				1.4em;
+	font-weight:			bold;
+	padding-top:			2.5%;
+	padding-bottom:			1%;
+}
+
+.contactLine
+{
+	font-family:			$customFont;
+	color:					$white;
+	font-size:				1em;
+}
+
+p 
+{
+	margin-bottom:			0 !important;
+	padding-bottom:			0 !important;
+}
