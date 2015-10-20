@@ -3,6 +3,10 @@ html, body
 	margin:					0;
 	padding:				0;
 }
+body
+{
+	overflow:hidden;
+}
 
 
 @font-face {
@@ -188,7 +192,7 @@ h2,h3,h4
 .yellow
 {
 	background:				$yellow;
-	height:					6vh;
+	height:					8vh;
 }
 
 .noMargin
@@ -294,7 +298,7 @@ ul
 {
 	font-family:			$customFont;
 	color:					$yellow;
-	font-size:				1.4em;
+	font-size:				1em;
 	font-weight:			bold;
 	padding-top:			2.5%;
 	padding-bottom:			1%;
@@ -304,7 +308,7 @@ ul
 {
 	font-family:			$customFont;
 	color:					$yellow;
-	font-size:				1.4em;
+	font-size:				1em;
 	font-weight:			bold;
 	padding-top:			2.5%;
 	padding-bottom:			1%;
@@ -314,7 +318,7 @@ ul
 {
 	font-family:			$customFont;
 	color:					$lightBlue;
-	font-size:				1.4em;
+	font-size:				1em;
 	font-weight:			bold;
 	padding-top:			2.5%;
 	padding-bottom:			1%;
@@ -324,7 +328,7 @@ ul
 {
 	font-family:			$customFont;
 	color:					$blue;
-	font-size:				1.4em;
+	font-size:				1em;
 	font-weight:			bold;
 	padding-top:			2.5%;
 	padding-bottom:			1%;
@@ -337,8 +341,65 @@ ul
 	font-size:				1em;
 }
 
+.circle
+{
+	float:					left;
+	margin-left:			55% !important;
+	margin-right:			-55% !important;
+	margin-top:				-25% !important;
+	position:				relative;
+}
+
 p 
 {
 	margin-bottom:			0 !important;
 	padding-bottom:			0 !important;
+}
+
+@media screen and (orientation:landscape){
+	.row
+	{
+		margin: 0 !important;
+	}
+	.whiteHeading
+	{
+		font-size:1.3em;
+	}
+	.greyHeading
+	{
+		font-size:1.2em;
+	}
+	p 
+	{
+		font-size:0.9em;
+	}
+	.nameYellow, .nameLightBlue, .nameBlue
+	{
+		padding-top:1%;
+		font-size:0.9em;
+	}
+	.circle
+	{
+		float:left;
+		margin-left:71% !important;
+		margin-top:-20% !important;
+		width:50%;
+	}
+	.social
+	{
+		padding-top: 15vh;
+	}
+	.tagline
+	{
+		font-size:7.4vh;
+	}
+	.floatRight
+	{
+		width:50%;
+	}
+	.workflow
+	{
+		float:left;
+		width:60%;
+	}
 }

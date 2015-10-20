@@ -2,6 +2,9 @@ html, body {
   margin: 0;
   padding: 0; }
 
+body {
+  overflow: hidden; }
+
 @font-face {
   font-family: 'Gotham-ExtraLight';
   src: url("fonts/Gotham-ExtraLight_gdi.eot");
@@ -105,7 +108,7 @@ h2, h3, h4 {
 
 .yellow {
   background: #FCBF00;
-  height: 6vh; }
+  height: 8vh; }
 
 .noMargin {
   margin: 0 !important; }
@@ -179,7 +182,7 @@ ul {
 .nameYellow {
   font-family: "Gotham-ExtraLight";
   color: #FCBF00;
-  font-size: 1.4em;
+  font-size: 1em;
   font-weight: bold;
   padding-top: 2.5%;
   padding-bottom: 1%; }
@@ -187,7 +190,7 @@ ul {
 .nameYellow {
   font-family: "Gotham-ExtraLight";
   color: #FCBF00;
-  font-size: 1.4em;
+  font-size: 1em;
   font-weight: bold;
   padding-top: 2.5%;
   padding-bottom: 1%; }
@@ -195,7 +198,7 @@ ul {
 .nameLightBlue {
   font-family: "Gotham-ExtraLight";
   color: #00A19A;
-  font-size: 1.4em;
+  font-size: 1em;
   font-weight: bold;
   padding-top: 2.5%;
   padding-bottom: 1%; }
@@ -203,7 +206,7 @@ ul {
 .nameBlue {
   font-family: "Gotham-ExtraLight";
   color: #0095D1;
-  font-size: 1.4em;
+  font-size: 1em;
   font-weight: bold;
   padding-top: 2.5%;
   padding-bottom: 1%; }
@@ -213,8 +216,51 @@ ul {
   color: #FFFFFF;
   font-size: 1em; }
 
+.circle {
+  float: left;
+  margin-left: 55% !important;
+  margin-right: -55% !important;
+  margin-top: -25% !important;
+  position: relative; }
+
 p {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important; }
+
+@media screen and (orientation: landscape) {
+  .row {
+    margin: 0 !important; }
+
+  .whiteHeading {
+    font-size: 1.3em; }
+
+  .greyHeading {
+    font-size: 1.2em; }
+
+  p {
+    font-size: 0.9em; }
+
+  .nameYellow, .nameLightBlue, .nameBlue {
+    padding-top: 1%;
+    font-size: 0.9em; }
+
+  .circle {
+    float: left;
+    margin-left: 71% !important;
+    margin-top: -20% !important;
+    width: 50%; }
+
+  .social {
+    padding-top: 15vh; }
+
+  .tagline {
+    font-size: 7.4vh; }
+
+  .floatRight {
+    width: 50%; }
+
+  .workflow {
+    float: left;
+    width: 60%; } }
 
 /*# sourceMappingURL=style.css.map */
