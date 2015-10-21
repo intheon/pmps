@@ -17,7 +17,7 @@ function parseTwitterData(rawJson)
 {
 	var asObj = JSON.parse(rawJson);
 
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < 8; i++)
 	{
 		var month = asObj[i].created_at.split(" ")[1];
 		var day = asObj[i].created_at.split(" ")[2];
